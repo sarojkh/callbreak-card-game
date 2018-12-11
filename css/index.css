@@ -1,0 +1,9 @@
+
+#footer_container{
+	background-color:#515151;
+	padding: 0.5em;
+	color:#fff;
+		text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+	border:#111 0.1em solid;
+	font-size:0.8em;
+}

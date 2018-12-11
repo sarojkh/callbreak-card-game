@@ -1,0 +1,30 @@
+
+#developer_profile_container{
+	
+}
+
+
+td.first_column{
+	font-size:0.9em;
+	font-style:italic;
+	background-color:rgb(201, 198, 198);
+	color:rgb(99, 94, 94);
+	text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+}
+
+td.second_column{
+	font-size:1em;
+}
+
+#developer_profile_container{
+	padding-right: 0em;
+	padding-left:0em;
+}
+
+#social_media_icons a:hover{
+	text-decoration:none;
+}
+
+#social_media_icons{
+	padding-left:0.5em;
+}

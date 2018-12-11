@@ -1,0 +1,132 @@
+
+
+#game_table{
+	border:1px solid #ddd;
+
+}
+
+.horizontal_stack{	
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	padding-left:3em;
+}
+
+.vertical_stack{
+	padding-left:0em;
+}
+
+.round_stack{
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+}
+
+.horizontal_stack .card{
+	display:inline-block;
+	float:left;
+	margin-left:-3.1em;
+	height:5.5em;
+	width:3.8em;
+}
+
+.vertical_stack .card{
+	display:block;
+	height:5.5em;
+	width:3.8em;
+	margin-left:1.2em;
+	margin-top:-4.8em;
+	/* FF Chrome Opera etc */
+	-webkit-transform: rotate(90deg); 
+	-webkit-trasnform-origin:50% 50%;
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	/* IE */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#hand_stack{
+	margin-left:15px;
+	margin-top:20px;
+}
+
+#hand_stack .card{
+	display:inline-block;
+	float:left;
+	margin-left:-1em;
+	height:5.5em;
+	width:3.8em;
+}
+
+#hand_stack #card_1{
+	margin-left:1em;
+	/* FF Chrome Opera etc */
+	-webkit-transform: rotate(10deg); 
+	-webkit-trasnform-origin:50% 50%;
+	-moz-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	/* IE */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#hand_stack #card_2{
+	
+	/* FF Chrome Opera etc */
+	-webkit-transform: rotate(20deg); 
+	-webkit-trasnform-origin:0% 50%;
+	-moz-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	/* IE */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#hand_stack #card_3{
+	margin-left:1em;
+	/* FF Chrome Opera etc */
+	-webkit-transform: rotate(0deg); 
+	-webkit-trasnform-origin:50% 50%;
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	/* IE */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#hand_stack #card_4{
+	/* FF Chrome Opera etc */
+	-webkit-transform: rotate(20deg); 
+	-webkit-trasnform-origin:50% 50%;
+	-moz-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	/* IE */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+#points_table{
+	font-size:0.6em;
+	width:auto;
+	height:auto;
+	margin-top:1em;
+}
+
+#points_table th, #points_table td {
+	text-align: center !important;
+	overflow:hidden;
+	padding:0 0.1em;
+	height:0.5em !important;
+}
+#player1_cards, #player3_cards{
+	height:117px;
+	width:274px;
+}
+
+#player2_cards, #player4_cards{
+	height:250px;
+	width:140px;
+}
+
+#player4_cards{
+	margin-left: 15px;
+}
+#message{
+	font-size:0.6em;
+	padding-left:1em;
+}
+#points_table_container{
+	padding-left:1em;
+}
+
+

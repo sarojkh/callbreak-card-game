@@ -1,0 +1,179 @@
+
+
+//Brainstroming for Callbreak 
+
+Game
+	-Rounds[5]
+	-Players[4]
+
+
+
+	
+Player
+	-Cards[13]
+
+Round
+	-Players[4]
+	-Hands[13]
+
+round(x):	
+	-setDealer
+	-dealCards
+	-setCurrentPlayer
+	-getCalls
+	-startHands * 13
+		-updateCallCount
+	-updatePointsTable
+
+
+	
+	
+Hand
+	-Cards[4]
+	setCurrentPlayer(player);
+	getWinner();
+	isValidMove(card);
+	addMove();
+	getMoveCount();
+
+isSuit(card, baseSuit);
+hasSuit(baseSuit);
+isGreaterThan(card, highestCard);
+hasGreaterThan(highestCard);
+
+validCards=[]
+
+FOR Valid Moves:
+if hasBaseSuit 
+	if handHasSpade && !baseSuitIsSpade
+		playAnyCardOfBaseSUit
+	else
+		if playerHasCardsOfSameSuitGreaterThanHighesetCardOfSameSuitInHand 
+			playCardOfSameSuitGreaterThanHighestCardInHand
+		else
+			playSmallerCardsOfSameSuit
+else
+	if handHasSpade 
+		if hasGreaterSpade 
+			playGreaterSpade 
+		else:
+			playAnyOtherCardOfAnySuitIncludingSpade
+	else
+		if playerHasSpade
+			playSpade
+		else
+			playCardOfAnyOtherSuit
+
+
+FOR Best Move Card:
+validMoves[];
+
+if(firstCardInHand):
+
+
+
+
+
+
+
+else://not the first card in hand
+	if hasBaseSuit 
+		if handHasSpade && !baseSuitIsSpade
+			playSmallestCardOfBaseSUit
+		else
+			if playerHasCardsOfSameSuitGreaterThanHighesetCardOfSameSuitInHand 
+				playCardOfSameSuitGreaterThanHighestCardInHand//TODO
+			else
+				playSmallestCardOfSameSuit
+	else
+		if handHasSpade 
+			if hasGreaterSpade 
+				playGreaterSpade[0]
+			else:
+				playAnyOtherLeastCardOfAnySuitIncludingSpade//TODO
+				-first priority are other cards but spade
+				-select least cards of most number of cards on hand
+		else
+			if playerHasSpade
+				playSmallestSpade
+			else
+				playLeastCardOfSuitWithMostCards
+
+
+
+
+
+
+
+
+
+
+
+
+
+Controller:
+	
+	onReady:
+		-startNewGame
+		-setPlayers
+
+	TTD:
+
+		-ifCurrentHandIsNotComplete
+			-listen
+			-updateCurrentPlayer
+			-updateGameView
+		else
+			-ifCurrentRoundIsNotComplete
+				-updateGameView
+				-pauseFor2Secs
+				-newHand
+				-updateCurrentHand
+				-updateCurrentPlayer
+				-updateGameView
+			else
+				-ifGameIsNotComplete
+					-updateGameView
+					-pauseFor2Secs
+					-newRound
+					-updateCurrentRound
+					-newHand
+					-updateCurrentHand
+					-udpateCurrentPlayer
+					-updateGameView
+				else
+					-endGmae
+					-updateGameView
+					
+
+
+
+	registerMove(player, card)
+		-if validMove
+			-registerMove
+			-animateTransformCardToHandStack(optional)
+			-updateGame()
+
+		else
+			-shakeCard (optional)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
